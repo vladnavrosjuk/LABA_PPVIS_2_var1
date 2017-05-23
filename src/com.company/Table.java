@@ -94,8 +94,7 @@ public class Table {
         for (Student student:studentArrayList)
         {DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
             Object objects[] = {student.getFirstName()+" "+student.getMiddleName()+" "+student.getLastName(),
-                    student.getGroup(),student.getNameekz1(),student.getExamList().get(0),student.getNameekz2(),student.getValuekz2(),student.getNameekz3(),
-                            student.getValueekz3()
+                    student.getGroup(),student.getExamList().get(0),student.getValueList().get(0),student.getExamList().get(1),student.getValueList().get(1),student.getExamList().get(2),student.getValueList().get(2)
             };
             tableModel.addRow(objects);
         }

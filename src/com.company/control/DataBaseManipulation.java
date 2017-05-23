@@ -29,17 +29,22 @@ public class DataBaseManipulation {
         newStudent.setMiddleName(addStudentView.getJtfamile().getText());
         newStudent.setLastName(addStudentView.getJtfnameprew().getText());
         newStudent.setGroup(addStudentView.getJtfstudentgroup().getText());
-        ArrayList<String > arrayList=new ArrayList();
-        arrayList.add((String)addStudentView.getComboBoxnameekz1().getSelectedItem());
-        arrayList.add((String)addStudentView.getComboBoxnameekz1().getSelectedItem());
-        arrayList.add((String)addStudentView.getComboBoxnameekz1().getSelectedItem());
-        newStudent.setExamList(arrayList);
-        newStudent.setNameekz1((String) addStudentView.getComboBoxnameekz1().getSelectedItem());
+        ArrayList<String > exam =new ArrayList();
+        ArrayList<String > value =new ArrayList();
+        exam.add((String)addStudentView.getComboBoxnameekz1().getSelectedItem());
+        exam.add((String)addStudentView.getComboBoxnameekz2().getSelectedItem());
+        exam.add((String)addStudentView.getComboBoxnameekz3().getSelectedItem());
+        newStudent.setExamList(exam);
+        value.add((String)addStudentView.getComboBoxvalueekz1().getSelectedItem());
+        value.add((String)addStudentView.getComboBoxvalueekz2().getSelectedItem());
+        value.add((String)addStudentView.getComboBoxvalueekz3().getSelectedItem());
+        newStudent.setValueList(value);
+   /*     newStudent.setNameekz1((String) addStudentView.getComboBoxnameekz1().getSelectedItem());
         newStudent.setValueekz1((String ) addStudentView.getComboBoxvalueekz1().getSelectedItem());
         newStudent.setNameekz2((String) addStudentView.getComboBoxnameekz2().getSelectedItem());
         newStudent.setValuekz2((String ) addStudentView.getComboBoxvalueekz2().getSelectedItem());
         newStudent.setNameekz3((String) addStudentView.getComboBoxnameekz3().getSelectedItem());
-        newStudent.setValueekz3((String) addStudentView.getComboBoxvalueekz3().getSelectedItem());
+        newStudent.setValueekz3((String) addStudentView.getComboBoxvalueekz3().getSelectedItem());*/
 
         studentBase.addStudent(newStudent);
         mainWindow.renderTable();

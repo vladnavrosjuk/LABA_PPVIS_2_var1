@@ -35,19 +35,19 @@ public class FileHandler extends DefaultHandler{
         if (qName.equalsIgnoreCase("group"))
             tempStudent.setGroup(tempData);
         if (qName.equalsIgnoreCase("exam1"))
-            tempStudent.setNameekz1(tempData);
+            tempStudent.getExamList().add(tempData);
         if (qName.equalsIgnoreCase("valueekz1"))
-            tempStudent.setValueekz1(tempData);
+            tempStudent.getValueList().add(tempData);
         if (qName.equalsIgnoreCase("exam2"))
-            tempStudent.setNameekz2(tempData);
+            tempStudent.getExamList().add(tempData);
         if (qName.equalsIgnoreCase("valueekz2")){
-            tempStudent.setValuekz2(tempData);
+            tempStudent.getValueList().add(tempData);
             System.out.println(tempData+" - - - - - -");
         }
         if (qName.equalsIgnoreCase("exam3"))
-            tempStudent.setNameekz3(tempData);
+            tempStudent.getExamList().add(tempData);
         if (qName.equalsIgnoreCase("valueekz3"))
-            tempStudent.setValueekz3(tempData);
+            tempStudent.getValueList().add(tempData);
 
 
 

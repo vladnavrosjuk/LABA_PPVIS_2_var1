@@ -40,6 +40,13 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public List<String> getValueList() {
+        return valueList;
+    }
+
+    public void setValueList(List<String> valueList) {
+        this.valueList = valueList;
+    }
 
     public void setMiddleName(String middleName) {
         this.middleName = middleName;

@@ -49,28 +49,28 @@ import java.util.List;
                  student.appendChild(group);
 
                  Element exam1 = document.createElement("exam1");
-                 exam1.appendChild(document.createTextNode(stud.getNameekz1()));
+                 exam1.appendChild(document.createTextNode(stud.getExamList().get(0)));
                  student.appendChild(exam1);
 
                  Element valueekz1 = document.createElement("valueekz1");
-                 valueekz1.appendChild(document.createTextNode(stud.getValueekz1()));
+                 valueekz1.appendChild(document.createTextNode(stud.getValueList().get(0)));
                  student.appendChild(valueekz1);
 
                  Element exam2 = document.createElement("exam2");
-                 exam2.appendChild(document.createTextNode(stud.getNameekz2()));
+                 exam2.appendChild(document.createTextNode(stud.getExamList().get(1)));
                  student.appendChild(exam2);
 
                  Element valueekz2 = document.createElement("valueekz2");
-                 valueekz2.appendChild(document.createTextNode(stud.getValuekz2()));
+                 valueekz2.appendChild(document.createTextNode(stud.getValueList().get(1)));
                  student.appendChild(valueekz2);
 
 
                  Element exam3 = document.createElement("exam3");
-                 exam3.appendChild(document.createTextNode(stud.getNameekz3()));
+                 exam3.appendChild(document.createTextNode(stud.getExamList().get(2)));
                  student.appendChild(exam3);
 
                  Element valueekz3 = document.createElement("valueekz3");
-                 valueekz3.appendChild(document.createTextNode(stud.getValueekz3()));
+                 valueekz3.appendChild(document.createTextNode(stud.getValueList().get(2)));
                  student.appendChild(valueekz3);
 
                  /*Element publicWork = document.createElement("publicWork");
