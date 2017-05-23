@@ -127,7 +127,7 @@ public class Student {
     public String getValueekz3() {        return valueekz3;    }
 
     public int getSrBall(){
-        return ((Integer.parseInt(valueekz1)+Integer.parseInt(valuekz2)+Integer.parseInt(valueekz3))/3);
+        return ((Integer.parseInt(valueList.get(0))+Integer.parseInt(valueList.get(1))+Integer.parseInt(valueList.get(2)))/3);
     }
 
 

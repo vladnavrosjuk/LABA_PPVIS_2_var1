@@ -108,14 +108,14 @@ public class DataBaseManipulation {
         ArrayList<Student> findStudentArrayList = new ArrayList<Student>();
         for(Student student: studentBase.getStudents()){
             if(student.getFirstName().equalsIgnoreCase(name)||name.equalsIgnoreCase(""))
-            {   if(student.getNameekz1().equalsIgnoreCase(exam))
-                {if(Integer.parseInt(student.getValueekz1())>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValueekz1())<Integer.parseInt(upperLimit))
+            {   if(student.getExamList().get(0).equalsIgnoreCase(exam))
+                {if(Integer.parseInt(student.getValueList().get(0))>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValueList().get(0))<Integer.parseInt(upperLimit))
                 findStudentArrayList.add(student);}
-                else if(student.getNameekz2().equalsIgnoreCase(exam))
-            {if(Integer.parseInt(student.getValuekz2())>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValuekz2())<Integer.parseInt(upperLimit))
+                else if(student.getExamList().get(1).equalsIgnoreCase(exam))
+            {if(Integer.parseInt(student.getValueList().get(1))>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValueList().get(1))<Integer.parseInt(upperLimit))
                 findStudentArrayList.add(student);}
-                else if(student.getNameekz3().equalsIgnoreCase(exam))
-            {if(Integer.parseInt(student.getValueekz3())>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValueekz3())<Integer.parseInt(upperLimit))
+                else if(student.getExamList().get(2).equalsIgnoreCase(exam))
+            {if(Integer.parseInt(student.getValueList().get(2))>Integer.parseInt(lowerLimit)&&Integer.parseInt(student.getValueList().get(2))<Integer.parseInt(upperLimit))
                 findStudentArrayList.add(student);}
 
             }
@@ -139,6 +139,13 @@ public class DataBaseManipulation {
     }*/
     public int deleteStudentByNameAndSrBall(String name, String lowerLimit, String upperLimit){
         int coll=studentBase.removeStudents(findStudentByNameAndSrBall(name,lowerLimit,upperLimit));
+        mainWindow.renderTable();
+        return coll;
+    }
+
+    public int deleteStudentByNameAndBallEkz(String name, String exam, String lowerLimit, String upperLimit){
+        int coll=studentBase.removeStudents(findStudentByNameAndBallEkz(name,exam, lowerLimit,upperLimit));
+        System.out.println("s ;fdijs;lgksfd  "+coll);
         mainWindow.renderTable();
         return coll;
     }

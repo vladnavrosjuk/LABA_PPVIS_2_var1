@@ -37,29 +37,22 @@ public class DeleteStudentView {
                }
            });
 
-       /*findStudentView.getFindByNameAndWorkButton().addActionListener(new ActionListener() {
+       findStudentView.getFindByNameAndWorkButton().addActionListener(new ActionListener() {
                @Override
                public void actionPerformed(ActionEvent actionEvent) {
                    findStudentView.removeElements();
-                   findStudentView.addFindByNameAndWorkElemens("Удаление", new ActionListener() {
+                   findStudentView.addFindByNameAndWorkElemens("Удаление",new ActionListener() {
                        @Override
                        public void actionPerformed(ActionEvent actionEvent) {
-                           findStudentView.removeElements();
-                           findStudentView.addFindByNameAndWorkElemens("Удаление",new ActionListener() {
-                               @Override
-                               public void actionPerformed(ActionEvent actionEvent) {
-                                   int count = dataBaseManipulation.deleteStudentByNameAndWork(findStudentView.getFirstData().getText(), findStudentView.getSecondData().getText());
-                                   findStudentView.getjDialog().setVisible(false);
-                                   if (count != 0) {
-                                       JOptionPane.showMessageDialog(new JFrame(), "Записей найдено и удалено " + count);
-                                   } else JOptionPane.showMessageDialog(new JFrame(), "Записей не найдено");
-                               }
-                           });
+                           int count = dataBaseManipulation.deleteStudentByNameAndBallEkz(findStudentView.getFirstData().getText(),(String)findStudentView.getExams().getSelectedItem(), findStudentView.getSecondData().getText(),findStudentView.getThirdData().getText());
+                           findStudentView.getjDialog().setVisible(false);
+                           if (count != 0) {
+                               JOptionPane.showMessageDialog(new JFrame(), "Записей найдено и удалено " + count);
+                           } else JOptionPane.showMessageDialog(new JFrame(), "Записей не найдено");
                        }
                    });
                }
            });
-*/
        findStudentView.getFindByNameNumberOfWorkButton().addActionListener(new ActionListener() {
                @Override
                public void actionPerformed(ActionEvent actionEvent) {

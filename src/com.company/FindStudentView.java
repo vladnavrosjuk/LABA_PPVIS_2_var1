@@ -87,6 +87,7 @@ public class FindStudentView {
         jDialog.remove(firstData);
         jDialog.remove(secondData);
         jDialog.remove(jLabel);
+        jDialog.remove(exams);
         firstData.setText("");
         secondData.setText("");
         thirdData.setText("");
@@ -221,6 +222,14 @@ public class FindStudentView {
 
     public TextField getThirdData() {
         return thirdData;
+    }
+
+    public TextField getForthData() {
+        return forthData;
+    }
+
+    public JComboBox getExams() {
+        return exams;
     }
 
     public JRadioButton getFindByNameAndGroupButton() {

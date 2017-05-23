@@ -95,6 +95,7 @@ public class MainWindow {
                 studentBase.readStudentBase();
                 pageWorker.setStudentList(studentBase.getStudents());
                 tableToolbar.setPageWorker(pageWorker);
+                tableToolbar.doClickLastPage();
                 renderTable();
             }
         });
